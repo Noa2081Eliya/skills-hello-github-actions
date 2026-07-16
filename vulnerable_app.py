@@ -29,5 +29,5 @@ def get_user_profile(user_id):
 def ping_host(hostname):
     # לא מאובטח! תוקף יכול להעביר מחרוזת כמו "8.8.8.8; rm -rf /"
     command = f"ping -c 1 {hostname}"
-    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+    result = subprocess.run(command, shell=False, capture_output=True, text=True)
     return result.stdout
